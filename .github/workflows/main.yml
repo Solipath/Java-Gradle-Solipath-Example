@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+
+    runs-on: ${{matrix.os}}
+
+    strategy: 
+      matrix:
+        include:
+          - os: macos-latest
+            command: ./solipath gradle build
+          - os: ubuntu-latest
+            command: ./solipath gradle build
+          - os: windows-latest
+            command: solipath gradle build
+    steps:
+    - name: Run tests
+      run: ${{matrix.command}}
