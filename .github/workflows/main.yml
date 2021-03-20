@@ -18,7 +18,7 @@ jobs:
           - os: ubuntu-latest
             command: ./solipath gradle build
           - os: windows-latest
-            command: solipath gradle build
+            command: .\solipath.bat gradle build
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
