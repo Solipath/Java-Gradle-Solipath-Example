@@ -20,5 +20,6 @@ jobs:
           - os: windows-latest
             command: solipath gradle build
     steps:
+    - uses: actions/checkout@v2
     - name: Run tests
       run: ${{matrix.command}}
