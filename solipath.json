@@ -1,4 +1,4 @@
 [
-	{"name": "java", "version": "11"},
-	{"name": "gradle", "version": "6.7"}
+	{"name": "java", "version": "21"},
+	{"name": "gradle", "version": "8.4"}
 ]
